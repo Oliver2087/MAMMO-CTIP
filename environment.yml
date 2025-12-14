@@ -1,4 +1,4 @@
-name: /projectnb/ec500kb/projects/Fall_2025_Projects/Project_3/env
+name: env
 channels:
   - conda-forge
   - nodefaults
@@ -147,4 +147,3 @@ dependencies:
   - sqlite==3.45.3=h5eee18b_0
   - ca-certificates==2024.3.11=h06a4308_0
   - kiwisolver==1.4.4=py38h6a678d5_0
-prefix: /projectnb/ec500kb/projects/Fall_2025_Projects/Project_3/env
