@@ -2,14 +2,17 @@ FROM pytorch/pytorch:2.2.2-cuda11.8-cudnn8-runtime
 
 WORKDIR /app
 
-# OS libs that help opencv/PIL in many cases
+# Optional OS libs (often helps image libs; safe to keep)
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
     libglib2.0-0 libsm6 libxext6 libxrender1 \
   && rm -rf /var/lib/apt/lists/*
 
-# Install only "extra" deps (NOT pytorch / pytorch-cuda)
-COPY environment.docker.yml /tmp/environment.docker.yml
-RUN conda env update -n base -f /tmp/environment.docker.yml && conda clean -a -y
+COPY requirements.txt /app/requirements.txt
+
+# Install extras with pip (no conda solve => avoids OOM)
+RUN python -m pip install --upgrade pip \
+ && pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app
 
