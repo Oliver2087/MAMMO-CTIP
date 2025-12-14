@@ -1,20 +1,19 @@
 name: env
 channels:
+  - conda-forge
   - pytorch
   - nvidia
-  - conda-forge
-  - defaults
 dependencies:
   - python=3.8
   - pip
 
-  # torch stack (match your current versions)
+  # torch GPU (matches your setup)
   - pytorch=2.2.2
   - torchvision=0.17.2
   - torchaudio=2.2.2
   - pytorch-cuda=11.8
 
-  # core python libs you almost certainly use
+  # common runtime libs
   - numpy
   - pandas
   - scipy
@@ -27,7 +26,7 @@ dependencies:
   - psutil
   - requests
 
-  # pip-only (keep only what your code imports)
+  # pip-only libs (keep only what your code imports)
   - pip:
       - albumentations==1.4.7
       - scikit-image==0.21.0
@@ -41,3 +40,6 @@ dependencies:
       - shapely==2.0.4
       - imageio==2.34.1
       - omegaconf==2.3.0
+      - imgaug==0.4.0
+      - dicomsdl==0.109.3
+      - tensorboard==2.14.0
