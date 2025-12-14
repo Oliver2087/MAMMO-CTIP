@@ -1,5 +1,5 @@
 # GPU runtime base (CUDA 12.1 + cuDNN8 on Ubuntu 22.04)
-FROM nvidia/cuda:11.8.1-cudnn8-runtime-ubuntu22.04
+FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
 
 # ---- OS deps (common for torch/torchvision/opencv/PIL + building pip wheels) ----
 RUN apt-get update && apt-get install -y --no-install-recommends \
