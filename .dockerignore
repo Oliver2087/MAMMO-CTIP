@@ -1,0 +1,11 @@
+dataset/
+data/
+runs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.git/
