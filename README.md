@@ -55,10 +55,9 @@ When using custom inputs, you must ensure:
 3. All data are accessible under the mounted directory (`/projectnb`)
 
 For reference, please inspect the structure and content of  
-`Embed_classification_diagnostic_data_wo_dup_folds_update.csv`.
+`Embed_classification_diagnostic_data_wo_dup_folds_update.csv` at  
+"/projectnb/ec500kb/projects/Fall_2025_Projects/Project_3/Embed_classification_diagnostic_data_wo_dup_folds_update.csv"
 
 ## Notes
-
 - This container is intended to be run on BU SCC only
-- At least 12 GB GPU memory is required
 - No container modification is needed for evaluation
